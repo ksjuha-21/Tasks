@@ -1,0 +1,8 @@
+﻿"id","name","surname","email"
+3,"vitaly","Виталий",""
+
+по запросу 
+SELECT t_int_aut_user.id, t_int_aut_user.name, t_int_aut_user.surname, t_int_aut_user.email  FROM t_int_aut_user_token 
+JOIN t_int_aut_user ON t_int_aut_user_token.user_id = t_int_aut_user.id 
+JOIN t_int_aut_token ON t_int_aut_user_token.token_id = t_int_aut_token.id
+WHERE t_int_aut_token.name = 'mon.amr';
