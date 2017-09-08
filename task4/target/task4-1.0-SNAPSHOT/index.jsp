@@ -11,11 +11,11 @@
     text for example: "использование гугла в изучении вопросов
     поощряется."<br/>
     Input text:<br>
-    <input name="name" type="text" id="name" value="использование гугла в изучении вопросов поощряется."  /><br>
+    <input name="name" type="text" id="name" value="использование гугла в изучении вопросов поощряется." size="50" /><br>
     Result translit:<br>
-    <input name="alias" type="text" id="alias" /><br/>
+    <input name="alias" type="text" id="alias" size="50"/><br/>
     Result обратный translit:<br>
-    <input name="al" type="text" id="al" />
+    <input name="al" type="text" id="al" size="50"/>
 </form>
 <div id="result"></div>
 
