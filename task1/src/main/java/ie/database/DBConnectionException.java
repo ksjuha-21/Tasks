@@ -1,8 +1,8 @@
 package ie.database;
 
 /**
- * Created by toshiba_admin on 16.03.2017.
- */
+ * @author Okcana Severovostokova
+ **/
 public class DBConnectionException extends Exception {
     private Exception e;
 

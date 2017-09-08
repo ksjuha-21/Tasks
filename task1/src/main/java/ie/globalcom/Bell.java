@@ -6,8 +6,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Created by toshiba_admin on 27.06.2017.
- */
+ * @author Okcana Severovostokova
+ **/
 public class Bell implements Thing {
 
     public void execute(HttpServletRequest request, HttpServletResponse response) {
@@ -15,10 +15,8 @@ public class Bell implements Thing {
         if (keyword.equals("ring")) {
 
             Result.getInstance().setResult("I am ring!");
-        }
-        else if (keyword.equals("bell")){
+        } else if (keyword.equals("bell")) {
             Result.getInstance().setResult("I am bell!");
         }
-
     }
 }

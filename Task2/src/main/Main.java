@@ -2,7 +2,9 @@ package main;
 
 import main.commands.Command;
 
-
+/**
+ * @author Okcana Severovostokova
+ **/
 public class Main {
 
     public static void main(String[] args) {
@@ -14,8 +16,7 @@ public class Main {
             String result = command.execute();
             System.out.println(result);
 
-        }
-        catch (Exception e) {
+        } catch (Exception e) {
             System.out.println(e);
         }
     }

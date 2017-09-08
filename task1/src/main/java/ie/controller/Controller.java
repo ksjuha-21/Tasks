@@ -11,7 +11,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-
+/**
+ * @author Okcana Severovostokova
+ **/
 public class Controller extends HttpServlet implements javax.servlet.Servlet {
 
     RequestHelper requestHelper = RequestHelper.getInstance();
@@ -42,9 +44,7 @@ public class Controller extends HttpServlet implements javax.servlet.Servlet {
             response.getWriter().write(result.getResult());
         } catch (IOException e) {
             e.printStackTrace();
-
         }
-
     }
 }
 

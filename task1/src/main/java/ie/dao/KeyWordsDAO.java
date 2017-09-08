@@ -5,8 +5,8 @@ import java.sql.Statement;
 import java.util.List;
 
 /**
- * Created by toshiba_admin on 27.06.2017.
- */
+ * @author Okcana Severovostokova
+ **/
 public interface KeyWordsDAO {
 
     String getClassNameByKeyWord(String keyword);

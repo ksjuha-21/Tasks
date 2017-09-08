@@ -1,9 +1,9 @@
 package main.commands;
 
 /**
- * Created by toshiba_admin on 07.09.2017.
- */
+ * @author Okcana Severovostokova
+ **/
 public interface Command {
 
-    String execute ();
+    String execute();
 }

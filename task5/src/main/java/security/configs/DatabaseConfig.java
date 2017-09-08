@@ -19,6 +19,7 @@ package security.configs;
 //
 //@Configuration
 //@EnableTransactionManagement
+
 public class DatabaseConfig {
 //
 ////  @Value("${spring.mvc.view.prefix}")

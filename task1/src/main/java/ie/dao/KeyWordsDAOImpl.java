@@ -7,10 +7,9 @@ import java.io.Serializable;
 import java.sql.*;
 
 /**
- * Created by toshiba_admin on 27.06.2017.
- */
+ * @author Okcana Severovostokova
+ **/
 public class KeyWordsDAOImpl implements KeyWordsDAO {
-
 
     private Connection connection;
     public static final String DATABASE_ENCODING = "database.encoding";
@@ -23,7 +22,7 @@ public class KeyWordsDAOImpl implements KeyWordsDAO {
         }
     }
 
-    public String getClassNameByKeyWord (String keyword)  {
+    public String getClassNameByKeyWord(String keyword) {
 
         PreparedStatement st = null;
         ResultSet rs = null;
@@ -35,10 +34,10 @@ public class KeyWordsDAOImpl implements KeyWordsDAO {
             st.setString(1, keyword);
             rs = st.executeQuery();
             if (rs.next()) {
-               binded_class  = rs.getInt("binded_class");
+                binded_class = rs.getInt("binded_class");
 
                 st = connection.prepareStatement("SELECT classname FROM classes WHERE id = ?");
-                st.setLong(1,binded_class);
+                st.setLong(1, binded_class);
                 rs = st.executeQuery();
                 if (rs.next()) {
                     className = rs.getString("classname");
@@ -52,10 +51,11 @@ public class KeyWordsDAOImpl implements KeyWordsDAO {
         }
         return className;
     }
-    public void closeResultSet(ResultSet rs)  {
+
+    public void closeResultSet(ResultSet rs) {
     }
 
-    public void closeStatement(Statement st)  {
+    public void closeStatement(Statement st) {
     }
 
     public void freeConnection() {

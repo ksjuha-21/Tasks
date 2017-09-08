@@ -1,12 +1,16 @@
 package ie.model;
 
 /**
- * Created by toshiba_admin on 11.04.2017.
- */
+ * @author Okcana Severovostokova
+ **/
 public class Result {
 
     private String result = "";
     private static Result instance;
+
+    private Result() {
+        instance = null;
+    }
 
     public static Result getInstance() {
         if (null == instance) {
@@ -14,6 +18,7 @@ public class Result {
         }
         return instance;
     }
+
     public String getResult() {
         return result;
     }

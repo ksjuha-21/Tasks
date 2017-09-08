@@ -5,8 +5,8 @@ import java.io.InputStreamReader;
 import java.util.*;
 
 /**
- * Created by toshiba_admin on 07.09.2017.
- */
+ * @author Okcana Severovostokova
+ **/
 public class PsCommand implements Command {
     @Override
     public String execute() {
@@ -14,10 +14,8 @@ public class PsCommand implements Command {
         String result = "";
 
         try {
-            Process proc = Runtime.getRuntime().exec(System.getenv("windir") +"\\system32\\"+"tasklist.exe");
-
+            Process proc = Runtime.getRuntime().exec(System.getenv("windir") + "\\system32\\" + "tasklist.exe");
             BufferedReader br = new BufferedReader(new InputStreamReader(proc.getInputStream()));
-
 
             Iterator<String> itr = getSortedList(br).iterator();
             while (itr.hasNext()) {
@@ -27,7 +25,6 @@ public class PsCommand implements Command {
             t.printStackTrace();
         }
         return result;
-
     }
 
     private List getSortedList(BufferedReader br) {

@@ -6,21 +6,26 @@ import ie.globalcom.Thing;
 
 import javax.servlet.http.HttpServletRequest;
 
+/**
+ * @author Okcana Severovostokova
+ **/
 public class RequestHelper {
-    private static RequestHelper instance = null;
+    private static RequestHelper;
 
     String keyword;
     KeyWordsDAOImpl keyWordsDAO = new KeyWordsDAOImpl();
     String className;
 
-    private  RequestHelper() {
+    private RequestHelper() {
+        instance = null;
     }
-    public Thing getCommand(HttpServletRequest request)  {
+
+    public Thing getCommand(HttpServletRequest request) {
 
         keyword = request.getParameter("keyword");
         className = keyWordsDAO.getClassNameByKeyWord(keyword);
-
         Class<?> act = null;
+
         try {
             act = Class.forName(className);
         } catch (ClassNotFoundException e) {
@@ -28,7 +33,7 @@ public class RequestHelper {
         }
 
         Thing thing = null;
-        if(act != null) {
+        if (act != null) {
             try {
                 thing = (Thing) act.newInstance();
             } catch (InstantiationException e) {
@@ -40,8 +45,7 @@ public class RequestHelper {
 
         if (thing != null) {
             return thing;
-        }
-        else {
+        } else {
             Result.getInstance().setResult(Constans.PAGE_ERROR);
         }
         return thing;

@@ -4,20 +4,16 @@ import java.util.Locale;
 import java.util.ResourceBundle;
 
 /**
- * Created by toshiba_admin on 27.06.2017.
- */
+ * @author Okcana Severovostokova
+ **/
 public class Constans {
 
-    public Constans() {}
-
-
+    public Constans() {
+    }
 
     public final static String PAGE_INDEX = "index.jsp";
     public final static String PAGE_ERROR = "jsp/error.jsp";
-
-
     public static final String PARAM_MESSAGE = "message";
-
     private static final String RESOURCE_PATH = "config";
 
     private static ResourceBundle resource = ResourceBundle.getBundle(RESOURCE_PATH, Locale.getDefault());
@@ -33,5 +29,4 @@ public class Constans {
             resource = ResourceBundle.getBundle(RESOURCE_PATH, Locale.getDefault());
         }
     }
-
 }

@@ -8,8 +8,8 @@ import java.sql.SQLException;
 import java.util.concurrent.LinkedBlockingQueue;
 
 /**
- * Created by toshiba_admin on 16.03.2017.
- */
+ * @author Okcana Severovostokova
+ **/
 public class DBConnectionPool {
 
     public static final String DATABASE_URL = "database.url";
